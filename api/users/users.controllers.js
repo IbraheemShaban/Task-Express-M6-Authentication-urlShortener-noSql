@@ -23,6 +23,7 @@ exports.signin = async (req, res) => {
   };
   // const token = jwt.sign(JSON.stringify(payload), JWT_SECRET);
   const token = jwt.sign(payload, JWT_SECRET);
+  console.log(payload.id);
   try {
     res.status(201).json(token);
   } catch (err) {
